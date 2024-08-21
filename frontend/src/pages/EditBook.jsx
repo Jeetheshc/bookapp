@@ -18,7 +18,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5151/books/${id}`)
+      .get(`https://bookapp-2-gnye.onrender.com/books/${id}`)
       .then((response) => {
         setTitle(response.data.title);
         setAuthor(response.data.author);
@@ -54,7 +54,7 @@ const EditBook = () => {
     setError("");
     setSuccess(""); // Clear previous success messages
     axios
-      .put(`http://localhost:5151/books/${id}`, data)
+      .put(`https://bookapp-2-gnye.onrender.com/books/${id}`, data)
       .then(() => {
         setLoading(false);
         setSuccess("Book details updated successfully!"); // Set success message
